@@ -17,9 +17,9 @@
 		EC3420562AE2F2F2002E842E /* ExerciseAttemptModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3420552AE2F2F2002E842E /* ExerciseAttemptModel.swift */; };
 		EC34205A2AE2F54C002E842E /* ExerciseAttemptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3420592AE2F54C002E842E /* ExerciseAttemptViewModel.swift */; };
 		EC34205F2AE31BD2002E842E /* ExerciseAttemptsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC34205E2AE31BD2002E842E /* ExerciseAttemptsList.swift */; };
-		EC3420612AE32266002E842E /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3420602AE32266002E842E /* PlayerModel.swift */; };
-		EC3420632AE3230F002E842E /* PlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3420622AE3230F002E842E /* PlayerViewModel.swift */; };
-		EC3420652AE323BD002E842E /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3420642AE323BD002E842E /* ProfileScreen.swift */; };
+		EC3420612AE32266002E842E /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3420602AE32266002E842E /* UserModel.swift */; };
+		EC3420632AE3230F002E842E /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3420622AE3230F002E842E /* UserViewModel.swift */; };
+		EC3420652AE323BD002E842E /* PlayerProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3420642AE323BD002E842E /* PlayerProfile.swift */; };
 		EC3420682AE32F3B002E842E /* AttemptCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3420672AE32F3B002E842E /* AttemptCard.swift */; };
 		EC34206A2AE33550002E842E /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3420692AE33550002E842E /* AuthManager.swift */; };
 		EC34206C2AE33617002E842E /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC34206B2AE33617002E842E /* Login.swift */; };
@@ -28,6 +28,15 @@
 		EC92D8A82AE3F65D00E8E5DA /* ExerciseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC92D8A72AE3F65D00E8E5DA /* ExerciseViewModel.swift */; };
 		EC92D8AA2AE3F84400E8E5DA /* ExerciseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC92D8A92AE3F84400E8E5DA /* ExerciseList.swift */; };
 		EC92D8AC2AE3FE7E00E8E5DA /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC92D8AB2AE3FE7E00E8E5DA /* ExerciseView.swift */; };
+		EC93EEB82AE5C95B0080CC9D /* Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93EEB72AE5C95B0080CC9D /* Signup.swift */; };
+		EC93EEBC2AE664170080CC9D /* RecordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93EEBB2AE664170080CC9D /* RecordingView.swift */; };
+		EC93EEC32AE6A3980080CC9D /* CoachModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93EEC22AE6A3980080CC9D /* CoachModel.swift */; };
+		EC93EEC52AE6A4940080CC9D /* CoachViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93EEC42AE6A4940080CC9D /* CoachViewModel.swift */; };
+		EC93EEC72AE6BC6A0080CC9D /* ProfileBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93EEC62AE6BC6A0080CC9D /* ProfileBase.swift */; };
+		EC93EEC92AE6BEED0080CC9D /* CoachProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93EEC82AE6BEED0080CC9D /* CoachProfile.swift */; };
+		EC93EECB2AE6C2E20080CC9D /* PlayerCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93EECA2AE6C2E20080CC9D /* PlayerCard.swift */; };
+		EC93EECD2AE6C3C30080CC9D /* PlayersList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93EECC2AE6C3C30080CC9D /* PlayersList.swift */; };
+		EC93EECF2AE6D12A0080CC9D /* PlayersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93EECE2AE6D12A0080CC9D /* PlayersViewModel.swift */; };
 		ECCAA6C32AE544A6008C4E92 /* back_squat.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = EC729D512AE53CA3009DFC36 /* back_squat.mp4 */; };
 		ECCAA6C52AE549F1008C4E92 /* AttemptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCAA6C42AE549F1008C4E92 /* AttemptView.swift */; };
 /* End PBXBuildFile section */
@@ -63,9 +72,9 @@
 		EC3420552AE2F2F2002E842E /* ExerciseAttemptModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseAttemptModel.swift; sourceTree = "<group>"; };
 		EC3420592AE2F54C002E842E /* ExerciseAttemptViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseAttemptViewModel.swift; sourceTree = "<group>"; };
 		EC34205E2AE31BD2002E842E /* ExerciseAttemptsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseAttemptsList.swift; sourceTree = "<group>"; };
-		EC3420602AE32266002E842E /* PlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
-		EC3420622AE3230F002E842E /* PlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewModel.swift; sourceTree = "<group>"; };
-		EC3420642AE323BD002E842E /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
+		EC3420602AE32266002E842E /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		EC3420622AE3230F002E842E /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		EC3420642AE323BD002E842E /* PlayerProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerProfile.swift; sourceTree = "<group>"; };
 		EC3420672AE32F3B002E842E /* AttemptCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttemptCard.swift; sourceTree = "<group>"; };
 		EC3420692AE33550002E842E /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		EC34206B2AE33617002E842E /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
@@ -75,6 +84,16 @@
 		EC92D8A72AE3F65D00E8E5DA /* ExerciseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewModel.swift; sourceTree = "<group>"; };
 		EC92D8A92AE3F84400E8E5DA /* ExerciseList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseList.swift; sourceTree = "<group>"; };
 		EC92D8AB2AE3FE7E00E8E5DA /* ExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseView.swift; sourceTree = "<group>"; };
+		EC93EEB72AE5C95B0080CC9D /* Signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signup.swift; sourceTree = "<group>"; };
+		EC93EEBB2AE664170080CC9D /* RecordingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingView.swift; sourceTree = "<group>"; };
+		EC93EEBD2AE66CCB0080CC9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		EC93EEC22AE6A3980080CC9D /* CoachModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachModel.swift; sourceTree = "<group>"; };
+		EC93EEC42AE6A4940080CC9D /* CoachViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachViewModel.swift; sourceTree = "<group>"; };
+		EC93EEC62AE6BC6A0080CC9D /* ProfileBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBase.swift; sourceTree = "<group>"; };
+		EC93EEC82AE6BEED0080CC9D /* CoachProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachProfile.swift; sourceTree = "<group>"; };
+		EC93EECA2AE6C2E20080CC9D /* PlayerCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCard.swift; sourceTree = "<group>"; };
+		EC93EECC2AE6C3C30080CC9D /* PlayersList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersList.swift; sourceTree = "<group>"; };
+		EC93EECE2AE6D12A0080CC9D /* PlayersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewModel.swift; sourceTree = "<group>"; };
 		ECCAA6C42AE549F1008C4E92 /* AttemptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttemptView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,6 +145,7 @@
 		EC036D312ADEC76E0048E579 /* FYP */ = {
 			isa = PBXGroup;
 			children = (
+				EC93EEBD2AE66CCB0080CC9D /* Info.plist */,
 				EC729D502AE53C6B009DFC36 /* Videos */,
 				EC3420662AE32EDF002E842E /* Components */,
 				EC3420582AE2F3BB002E842E /* ViewModels */,
@@ -169,8 +189,9 @@
 			isa = PBXGroup;
 			children = (
 				EC3420552AE2F2F2002E842E /* ExerciseAttemptModel.swift */,
-				EC3420602AE32266002E842E /* PlayerModel.swift */,
+				EC3420602AE32266002E842E /* UserModel.swift */,
 				EC92D8A52AE3F5A300E8E5DA /* ExerciseModel.swift */,
+				EC93EEC22AE6A3980080CC9D /* CoachModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -179,11 +200,15 @@
 			isa = PBXGroup;
 			children = (
 				EC34205E2AE31BD2002E842E /* ExerciseAttemptsList.swift */,
-				EC3420642AE323BD002E842E /* ProfileScreen.swift */,
+				EC3420642AE323BD002E842E /* PlayerProfile.swift */,
 				EC34206B2AE33617002E842E /* Login.swift */,
 				EC92D8A92AE3F84400E8E5DA /* ExerciseList.swift */,
 				EC92D8AB2AE3FE7E00E8E5DA /* ExerciseView.swift */,
 				ECCAA6C42AE549F1008C4E92 /* AttemptView.swift */,
+				EC93EEB72AE5C95B0080CC9D /* Signup.swift */,
+				EC93EEBB2AE664170080CC9D /* RecordingView.swift */,
+				EC93EEC82AE6BEED0080CC9D /* CoachProfile.swift */,
+				EC93EECC2AE6C3C30080CC9D /* PlayersList.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -192,8 +217,10 @@
 			isa = PBXGroup;
 			children = (
 				EC3420592AE2F54C002E842E /* ExerciseAttemptViewModel.swift */,
-				EC3420622AE3230F002E842E /* PlayerViewModel.swift */,
+				EC3420622AE3230F002E842E /* UserViewModel.swift */,
 				EC92D8A72AE3F65D00E8E5DA /* ExerciseViewModel.swift */,
+				EC93EEC42AE6A4940080CC9D /* CoachViewModel.swift */,
+				EC93EECE2AE6D12A0080CC9D /* PlayersViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -203,6 +230,8 @@
 			children = (
 				EC3420672AE32F3B002E842E /* AttemptCard.swift */,
 				EC34206D2AE33BEB002E842E /* SplashHeader.swift */,
+				EC93EEC62AE6BC6A0080CC9D /* ProfileBase.swift */,
+				EC93EECA2AE6C2E20080CC9D /* PlayerCard.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -347,22 +376,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC92D8AC2AE3FE7E00E8E5DA /* ExerciseView.swift in Sources */,
-				EC3420612AE32266002E842E /* PlayerModel.swift in Sources */,
+				EC3420612AE32266002E842E /* UserModel.swift in Sources */,
+				EC93EECB2AE6C2E20080CC9D /* PlayerCard.swift in Sources */,
 				EC34205A2AE2F54C002E842E /* ExerciseAttemptViewModel.swift in Sources */,
 				EC036D352ADEC76E0048E579 /* ContentView.swift in Sources */,
+				EC93EEBC2AE664170080CC9D /* RecordingView.swift in Sources */,
 				EC34205F2AE31BD2002E842E /* ExerciseAttemptsList.swift in Sources */,
+				EC93EEB82AE5C95B0080CC9D /* Signup.swift in Sources */,
 				EC3420562AE2F2F2002E842E /* ExerciseAttemptModel.swift in Sources */,
 				EC92D8A62AE3F5A300E8E5DA /* ExerciseModel.swift in Sources */,
 				EC036D332ADEC76E0048E579 /* FYPApp.swift in Sources */,
 				ECCAA6C52AE549F1008C4E92 /* AttemptView.swift in Sources */,
-				EC3420632AE3230F002E842E /* PlayerViewModel.swift in Sources */,
+				EC3420632AE3230F002E842E /* UserViewModel.swift in Sources */,
+				EC93EEC32AE6A3980080CC9D /* CoachModel.swift in Sources */,
+				EC93EEC52AE6A4940080CC9D /* CoachViewModel.swift in Sources */,
 				EC3420682AE32F3B002E842E /* AttemptCard.swift in Sources */,
-				EC3420652AE323BD002E842E /* ProfileScreen.swift in Sources */,
+				EC93EECD2AE6C3C30080CC9D /* PlayersList.swift in Sources */,
+				EC3420652AE323BD002E842E /* PlayerProfile.swift in Sources */,
 				EC34206E2AE33BEB002E842E /* SplashHeader.swift in Sources */,
+				EC93EEC92AE6BEED0080CC9D /* CoachProfile.swift in Sources */,
 				EC92D8AA2AE3F84400E8E5DA /* ExerciseList.swift in Sources */,
+				EC93EEC72AE6BC6A0080CC9D /* ProfileBase.swift in Sources */,
 				EC34206C2AE33617002E842E /* Login.swift in Sources */,
 				EC92D8A82AE3F65D00E8E5DA /* ExerciseViewModel.swift in Sources */,
 				EC34206A2AE33550002E842E /* AuthManager.swift in Sources */,
+				EC93EECF2AE6D12A0080CC9D /* PlayersViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,11 +567,14 @@
 				DEVELOPMENT_TEAM = QR9J2FWA6N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FYP/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "To capture videos";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "To capture videos";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "To capture videos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -558,11 +599,14 @@
 				DEVELOPMENT_TEAM = QR9J2FWA6N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FYP/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "To capture videos";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "To capture videos";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "To capture videos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

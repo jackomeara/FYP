@@ -9,6 +9,7 @@ import Foundation
 
 class LoginManager: ObservableObject {
     @Published var isLoggedIn = false
+    @Published var role = "player"
     
     func login() {
         self.isLoggedIn = true
@@ -16,5 +17,13 @@ class LoginManager: ObservableObject {
     
     func logout() {
         self.isLoggedIn = false
+    }
+    
+    func makePlayer() {
+        self.role = "player"
+    }
+    
+    func makeCoach() {
+        self.role = "coach"
     }
 }

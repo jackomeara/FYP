@@ -11,6 +11,7 @@ struct ExerciseAttempt: Identifiable {
     let id: UUID
     let score: Float
     let player: String
+    let playerEmail: String
     let technique: String
     let coachScore: Float
     let date: String

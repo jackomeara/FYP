@@ -13,39 +13,43 @@ struct Login: View {
     @State private var password: String = ""
     
     var body: some View {
-        VStack(alignment: .center) {
-//            SplashHeader()
-            TextField(
-                "Email",
-                text: $email
-            )
-            .padding(.horizontal, 30)
-            .textFieldStyle(.roundedBorder)
-            .disableAutocorrection(true)
-            
-            SecureField(
-                "Password",
-                text: $password
-            )
-            .padding(.horizontal, 30)
-            .textFieldStyle(.roundedBorder)
-            .disableAutocorrection(true)
-            
-            Button("Log In") {
-                loginManager.login()
+        NavigationStack {
+            VStack(alignment: .center) {
+                //            SplashHeader()
+                TextField(
+                    "Email",
+                    text: $email
+                )
+                .padding(.horizontal, 30)
+                .textFieldStyle(.roundedBorder)
+                .disableAutocorrection(true)
+                
+                SecureField(
+                    "Password",
+                    text: $password
+                )
+                .padding(.horizontal, 30)
+                .textFieldStyle(.roundedBorder)
+                .disableAutocorrection(true)
+                
+                Button("Log In") {
+                    loginManager.makePlayer()
+                    loginManager.login()
+                }
+                .buttonStyle(.borderedProminent)
+                
+                
+                Text("Don't have an account?")
+                    .font(.headline)
+                    .fontWeight(.medium)
+                NavigationLink(
+                    destination: Signup(loginManager: loginManager),
+                    label: {
+                        Text("Sign Up")
+                            .foregroundStyle(.blue)
+                    }
+                )
             }
-            .buttonStyle(.borderedProminent)
-            
-            
-            Text("Don't have an account?")
-                .font(.headline)
-                .fontWeight(.medium)
-            NavigationLink(
-                destination: ProfileScreen(loginManager: loginManager),
-                label: {
-                    Text("Sign Up")
-                        .foregroundStyle(.blue)
-                })
         }
     }
 }

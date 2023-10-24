@@ -7,39 +7,48 @@
 
 import SwiftUI
 import AVKit
+import PhotosUI
 
 struct ExerciseView: View {
+    @State var selectedItems: [PhotosPickerItem] = []
     var exercise: Exercise
     let avPlayer = AVPlayer(url: Bundle.main.url(forResource: "back_squat", withExtension: "mp4")!)
     
     var body: some View {
-        VStack {
-            Text(exercise.name)
-                .font(.title)
-                .padding(.top, 50)
-            VideoPlayer(player: avPlayer)
-                .onDisappear{
-                    avPlayer.isMuted = false
-                }
-                .frame(height: 300)
-            Text(exercise.description)
-                .font(.headline)
-                .foregroundStyle(Color.gray)
-                .padding(.top, 30)
+        NavigationView{
             
-            Spacer()
-            
-            HStack {
-                Button("Record Video") {
-                    
+            VStack {
+                Text(exercise.name)
+                    .font(.title)
+                    .padding(.top, 50)
+                VideoPlayer(player: avPlayer)
+                    .onDisappear{
+                        avPlayer.isMuted = false
+                    }
+                    .frame(height: 300)
+                Text(exercise.description)
+                    .font(.headline)
+                    .foregroundStyle(Color.gray)
+                    .padding(.top, 30)
+                
+                Spacer()
+                
+                HStack {
+                    NavigationLink(destination: RecordingView()) {
+                            Text("Record Video")
+                    }
+                    .buttonStyle(.borderedProminent)
+                    PhotosPicker(
+                        selection: $selectedItems,
+                        maxSelectionCount: 1,
+                        matching: .any(of: [.videos])
+                    ) {
+                        Text("Upload Video")
+                        
+                    }
                 }
-                .buttonStyle(.borderedProminent)
-                Button("Upload Video") {
-                    
-                }
-                .buttonStyle(.borderedProminent)
+                .padding(.bottom, 50)
             }
-            .padding(.bottom, 50)
             
         }
     }
