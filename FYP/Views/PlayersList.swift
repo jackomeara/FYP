@@ -46,7 +46,7 @@ struct PlayersList: View {
             
             List{
                 ForEach(playersModel.players) {user in
-                    NavigationLink(destination: Text(user.name)) {
+                    NavigationLink(destination: PlayerView(player: user)) {
                         PlayerCard(user: user)
                             .foregroundColor(.black)
                     }

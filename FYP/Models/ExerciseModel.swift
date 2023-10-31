@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Exercise: Identifiable {
+struct Exercise: Identifiable, Hashable {
     let id: UUID
     let name: String
     let description: String

@@ -24,6 +24,13 @@
 		EC34206A2AE33550002E842E /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3420692AE33550002E842E /* AuthManager.swift */; };
 		EC34206C2AE33617002E842E /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC34206B2AE33617002E842E /* Login.swift */; };
 		EC34206E2AE33BEB002E842E /* SplashHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC34206D2AE33BEB002E842E /* SplashHeader.swift */; };
+		EC4240FF2AF10E5900E3C870 /* CoachAttemptsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4240FE2AF10E5900E3C870 /* CoachAttemptsList.swift */; };
+		EC4241012AF110AF00E3C870 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4241002AF110AF00E3C870 /* PlayerView.swift */; };
+		EC4241032AF113B900E3C870 /* PlayerEnabledExercises.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4241022AF113B900E3C870 /* PlayerEnabledExercises.swift */; };
+		EC4241052AF117F300E3C870 /* GroupsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4241042AF117F300E3C870 /* GroupsList.swift */; };
+		EC4241072AF1181A00E3C870 /* GroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4241062AF1181A00E3C870 /* GroupModel.swift */; };
+		EC4241092AF1188800E3C870 /* GroupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4241082AF1188800E3C870 /* GroupViewModel.swift */; };
+		EC42410B2AF11A3600E3C870 /* GroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC42410A2AF11A3600E3C870 /* GroupView.swift */; };
 		EC92D8A62AE3F5A300E8E5DA /* ExerciseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC92D8A52AE3F5A300E8E5DA /* ExerciseModel.swift */; };
 		EC92D8A82AE3F65D00E8E5DA /* ExerciseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC92D8A72AE3F65D00E8E5DA /* ExerciseViewModel.swift */; };
 		EC92D8AA2AE3F84400E8E5DA /* ExerciseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC92D8A92AE3F84400E8E5DA /* ExerciseList.swift */; };
@@ -79,6 +86,13 @@
 		EC3420692AE33550002E842E /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		EC34206B2AE33617002E842E /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		EC34206D2AE33BEB002E842E /* SplashHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashHeader.swift; sourceTree = "<group>"; };
+		EC4240FE2AF10E5900E3C870 /* CoachAttemptsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachAttemptsList.swift; sourceTree = "<group>"; };
+		EC4241002AF110AF00E3C870 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		EC4241022AF113B900E3C870 /* PlayerEnabledExercises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerEnabledExercises.swift; sourceTree = "<group>"; };
+		EC4241042AF117F300E3C870 /* GroupsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsList.swift; sourceTree = "<group>"; };
+		EC4241062AF1181A00E3C870 /* GroupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupModel.swift; sourceTree = "<group>"; };
+		EC4241082AF1188800E3C870 /* GroupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewModel.swift; sourceTree = "<group>"; };
+		EC42410A2AF11A3600E3C870 /* GroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupView.swift; sourceTree = "<group>"; };
 		EC729D512AE53CA3009DFC36 /* back_squat.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = back_squat.mp4; sourceTree = "<group>"; };
 		EC92D8A52AE3F5A300E8E5DA /* ExerciseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseModel.swift; sourceTree = "<group>"; };
 		EC92D8A72AE3F65D00E8E5DA /* ExerciseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewModel.swift; sourceTree = "<group>"; };
@@ -192,6 +206,7 @@
 				EC3420602AE32266002E842E /* UserModel.swift */,
 				EC92D8A52AE3F5A300E8E5DA /* ExerciseModel.swift */,
 				EC93EEC22AE6A3980080CC9D /* CoachModel.swift */,
+				EC4241062AF1181A00E3C870 /* GroupModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -209,6 +224,11 @@
 				EC93EEBB2AE664170080CC9D /* RecordingView.swift */,
 				EC93EEC82AE6BEED0080CC9D /* CoachProfile.swift */,
 				EC93EECC2AE6C3C30080CC9D /* PlayersList.swift */,
+				EC4240FE2AF10E5900E3C870 /* CoachAttemptsList.swift */,
+				EC4241002AF110AF00E3C870 /* PlayerView.swift */,
+				EC4241022AF113B900E3C870 /* PlayerEnabledExercises.swift */,
+				EC4241042AF117F300E3C870 /* GroupsList.swift */,
+				EC42410A2AF11A3600E3C870 /* GroupView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -221,6 +241,7 @@
 				EC92D8A72AE3F65D00E8E5DA /* ExerciseViewModel.swift */,
 				EC93EEC42AE6A4940080CC9D /* CoachViewModel.swift */,
 				EC93EECE2AE6D12A0080CC9D /* PlayersViewModel.swift */,
+				EC4241082AF1188800E3C870 /* GroupViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -382,6 +403,9 @@
 				EC036D352ADEC76E0048E579 /* ContentView.swift in Sources */,
 				EC93EEBC2AE664170080CC9D /* RecordingView.swift in Sources */,
 				EC34205F2AE31BD2002E842E /* ExerciseAttemptsList.swift in Sources */,
+				EC4241052AF117F300E3C870 /* GroupsList.swift in Sources */,
+				EC4241092AF1188800E3C870 /* GroupViewModel.swift in Sources */,
+				EC4241072AF1181A00E3C870 /* GroupModel.swift in Sources */,
 				EC93EEB82AE5C95B0080CC9D /* Signup.swift in Sources */,
 				EC3420562AE2F2F2002E842E /* ExerciseAttemptModel.swift in Sources */,
 				EC92D8A62AE3F5A300E8E5DA /* ExerciseModel.swift in Sources */,
@@ -392,12 +416,16 @@
 				EC93EEC52AE6A4940080CC9D /* CoachViewModel.swift in Sources */,
 				EC3420682AE32F3B002E842E /* AttemptCard.swift in Sources */,
 				EC93EECD2AE6C3C30080CC9D /* PlayersList.swift in Sources */,
+				EC42410B2AF11A3600E3C870 /* GroupView.swift in Sources */,
+				EC4241032AF113B900E3C870 /* PlayerEnabledExercises.swift in Sources */,
 				EC3420652AE323BD002E842E /* PlayerProfile.swift in Sources */,
 				EC34206E2AE33BEB002E842E /* SplashHeader.swift in Sources */,
 				EC93EEC92AE6BEED0080CC9D /* CoachProfile.swift in Sources */,
 				EC92D8AA2AE3F84400E8E5DA /* ExerciseList.swift in Sources */,
 				EC93EEC72AE6BC6A0080CC9D /* ProfileBase.swift in Sources */,
 				EC34206C2AE33617002E842E /* Login.swift in Sources */,
+				EC4241012AF110AF00E3C870 /* PlayerView.swift in Sources */,
+				EC4240FF2AF10E5900E3C870 /* CoachAttemptsList.swift in Sources */,
 				EC92D8A82AE3F65D00E8E5DA /* ExerciseViewModel.swift in Sources */,
 				EC34206A2AE33550002E842E /* AuthManager.swift in Sources */,
 				EC93EECF2AE6D12A0080CC9D /* PlayersViewModel.swift in Sources */,

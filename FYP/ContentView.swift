@@ -30,7 +30,7 @@ struct ContentView: View {
             }
             else {
                 TabView {
-                    Text("Activity")
+                    CoachAttemptsList()
                         .tabItem {
                             Label("Activity", systemImage: "figure.cooldown")
                         }
@@ -38,7 +38,7 @@ struct ContentView: View {
                         .tabItem {
                             Label("Players", systemImage: "person.2.fill")
                         }
-                    Text("Groups")
+                    GroupsList()
                         .tabItem {
                             Label("Groups", systemImage: "person.3.fill")
                         }
