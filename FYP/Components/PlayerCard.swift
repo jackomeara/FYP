@@ -8,23 +8,23 @@
 import SwiftUI
 
 struct PlayerCard: View {
-    @State var user: User
+    @State var player: Player
     var body: some View {
         HStack {
-            if(user.profilePhoto == "none") {
+            if(player.profilePhoto == "none") {
                 Image(systemName: "person.circle.fill")
                     .resizable()
                     .foregroundColor(.green)
                     .frame(width:50, height:50)
             } else {
-                Image(user.profilePhoto)
+                Image(player.profilePhoto)
                     .resizable()
                     .scaledToFill()
                     .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
                     .foregroundColor(.green)
                     .frame(width:50, height:50)
             }
-            Text(user.name)
+            Text(player.name)
                 .font(.title2)
                 .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
         }
@@ -32,13 +32,13 @@ struct PlayerCard: View {
 }
 
 #Preview {
-    PlayerCard(user: User(id: UUID(), name: "Jack O'Meara", email: "jedomeara@gmail.com", profilePhoto: "none"))
+    PlayerCard(player: Player(id: UUID(), name: "Jack O'Meara", email: "jedomeara@gmail.com", profilePhoto: "none"))
 }
 
 #Preview("Kobe") {
-    PlayerCard(user: User(id: UUID(), name: "Kobe Bryant", email: "kobe@gmail.com", profilePhoto: "kobe"))
+    PlayerCard(player: Player(id: UUID(), name: "Kobe Bryant", email: "kobe@gmail.com", profilePhoto: "kobe"))
 }
 
 #Preview("Jared Dudley") {
-    PlayerCard(user: User(id: UUID(), name: "Jared Dudley", email: "jareddudley@gmail.com", profilePhoto: "jared_dudley"))
+    PlayerCard(player: Player(id: UUID(), name: "Jared Dudley", email: "jareddudley@gmail.com", profilePhoto: "jared_dudley"))
 }

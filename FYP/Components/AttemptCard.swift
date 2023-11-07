@@ -33,11 +33,11 @@ struct AttemptCard: View {
             VStack(alignment: .trailing) {
                 HStack {
                     Image(systemName: "desktopcomputer")
-                    Text("\(String(attempt.score))")
+                    Text("\(attempt.score != nil ? String(attempt.score!) : "N/A")")
                 }.font(.subheadline)
                 HStack {
                     Image(systemName: "person.fill")
-                    Text("\(String(attempt.coachScore))")
+                    Text("\(attempt.coachScore != nil ? String(attempt.coachScore!) : "N/A")")
                 }.font(.subheadline)
             }
             .padding()
@@ -48,5 +48,5 @@ struct AttemptCard: View {
 }
 
 #Preview {
-    AttemptCard(attempt: ExerciseAttempt(id: UUID(), score: 7.6, player: "Jack O'Meara", playerEmail: "jedomeara@gmail.com", technique: "Back Squat", coachScore: 7.4, date: "1 week ago"))
+    AttemptCard(attempt: ExerciseAttempt(id: UUID(), score: 7.6, player: "Jack O'Meara", playerEmail: "jedomeara@gmail.com", technique: "Back Squat", coachScore: 7.4, date: "1 week ago", techniqueID: "12345", playerID: "12345", aiFeedbackID: UUID(), coachFeedbackID: UUID()))
 }

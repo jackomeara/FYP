@@ -43,7 +43,7 @@ struct AttemptView: View {
                             Text("AI Score")
                                 .font(.title2)
                         }
-                        Text(String(attempt.score))
+                        Text(attempt.score != nil ? String(attempt.score!) : "N/A")
                             .font(.title)
                             .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                     }
@@ -54,7 +54,7 @@ struct AttemptView: View {
                             Text("Coach Score")
                                 .font(.title2)
                         }
-                        Text(String(attempt.coachScore))
+                        Text(attempt.coachScore != nil ? String(attempt.coachScore!) : "N/A")
                             .font(.title)
                             .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                     }
@@ -76,5 +76,5 @@ struct AttemptView: View {
 }
 
 #Preview {
-    AttemptView(attempt: ExerciseAttempt(id: UUID(), score: 7.4, player: "Jack O'Meara", playerEmail:"jedomeara@gmail.com", technique: "Back Squat", coachScore: 8.2, date: "2 days ago"))
+    AttemptView(attempt: ExerciseAttempt(id: UUID(), score: 7.4, player: "Jack O'Meara", playerEmail:"jedomeara@gmail.com", technique: "Back Squat", coachScore: 8.2, date: "2 days ago", techniqueID: "12345", playerID: "12345", aiFeedbackID: UUID(), coachFeedbackID: UUID()))
 }

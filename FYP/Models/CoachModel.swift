@@ -7,25 +7,33 @@
 
 import Foundation
 
-struct Coach: Identifiable {
+struct Coach: Identifiable, Codable, Hashable {
     var id: UUID
     var name: String
     var email: String
-    var status: CoachRelation
 }
 
-enum CoachRelation {
-    case active
-    case pending
-    case rejected
-}
-
-extension CoachRelation {
-    var icon: String {
-        switch self {
-        case .active: return "checkmark.circle.fill"
-        case .pending: return "clock.circle.fill"
-        case .rejected: return "xmark.circle.fill"
-        }
-    }
+struct UserResponse: Codable {
+    var id: UUID
+    var first_name: String
+    var last_name: String
+    var email: String
+    var password: String?
+    var location: String?
+    var title: String?
+    var description: String?
+    var tags: String?
+    var avatar: String?
+    var language: String?
+    var theme: String?
+    var tfa_secret: String?
+    var status: String?
+    var role: UUID
+    var token: String?
+    var last_access: String?
+    var last_page: String?
+    var provider: String?
+    var external_identifier: String?
+    var auth_data: String?
+    var email_notifications: Bool?
 }

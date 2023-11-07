@@ -46,6 +46,10 @@
 		EC93EECF2AE6D12A0080CC9D /* PlayersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93EECE2AE6D12A0080CC9D /* PlayersViewModel.swift */; };
 		ECCAA6C32AE544A6008C4E92 /* back_squat.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = EC729D512AE53CA3009DFC36 /* back_squat.mp4 */; };
 		ECCAA6C52AE549F1008C4E92 /* AttemptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCAA6C42AE549F1008C4E92 /* AttemptView.swift */; };
+		ECF9232A2AF94E07004D45FE /* formatDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF923292AF94E07004D45FE /* formatDate.swift */; };
+		ECF923322AFA4BDB004D45FE /* PlayerCoachRelationship.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF923312AFA4BDB004D45FE /* PlayerCoachRelationship.swift */; };
+		ECF923342AFA4C47004D45FE /* PlayerCoachRelationshipViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF923332AFA4C47004D45FE /* PlayerCoachRelationshipViewModel.swift */; };
+		ECF923362AFA629B004D45FE /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF923352AFA629B004D45FE /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +113,11 @@
 		EC93EECC2AE6C3C30080CC9D /* PlayersList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersList.swift; sourceTree = "<group>"; };
 		EC93EECE2AE6D12A0080CC9D /* PlayersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewModel.swift; sourceTree = "<group>"; };
 		ECCAA6C42AE549F1008C4E92 /* AttemptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttemptView.swift; sourceTree = "<group>"; };
+		ECF923292AF94E07004D45FE /* formatDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = formatDate.swift; sourceTree = "<group>"; };
+		ECF9232C2AF959F5004D45FE /* dev.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = dev.xcconfig; sourceTree = "<group>"; };
+		ECF923312AFA4BDB004D45FE /* PlayerCoachRelationship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCoachRelationship.swift; sourceTree = "<group>"; };
+		ECF923332AFA4C47004D45FE /* PlayerCoachRelationshipViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCoachRelationshipViewModel.swift; sourceTree = "<group>"; };
+		ECF923352AFA629B004D45FE /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +168,8 @@
 		EC036D312ADEC76E0048E579 /* FYP */ = {
 			isa = PBXGroup;
 			children = (
+				ECF9232B2AF959C1004D45FE /* Configs */,
+				ECF923282AF94DF1004D45FE /* Helpers */,
 				EC93EEBD2AE66CCB0080CC9D /* Info.plist */,
 				EC729D502AE53C6B009DFC36 /* Videos */,
 				EC3420662AE32EDF002E842E /* Components */,
@@ -207,6 +218,8 @@
 				EC92D8A52AE3F5A300E8E5DA /* ExerciseModel.swift */,
 				EC93EEC22AE6A3980080CC9D /* CoachModel.swift */,
 				EC4241062AF1181A00E3C870 /* GroupModel.swift */,
+				ECF923312AFA4BDB004D45FE /* PlayerCoachRelationship.swift */,
+				ECF923352AFA629B004D45FE /* Player.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -214,21 +227,14 @@
 		EC3420572AE2F3B3002E842E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				EC34205E2AE31BD2002E842E /* ExerciseAttemptsList.swift */,
-				EC3420642AE323BD002E842E /* PlayerProfile.swift */,
-				EC34206B2AE33617002E842E /* Login.swift */,
+				ECF6D7EC2AF942050096FCCD /* coach */,
+				ECF6D7EB2AF941FE0096FCCD /* player */,
+				ECF6D7EA2AF941F50096FCCD /* common */,
 				EC92D8A92AE3F84400E8E5DA /* ExerciseList.swift */,
 				EC92D8AB2AE3FE7E00E8E5DA /* ExerciseView.swift */,
 				ECCAA6C42AE549F1008C4E92 /* AttemptView.swift */,
-				EC93EEB72AE5C95B0080CC9D /* Signup.swift */,
 				EC93EEBB2AE664170080CC9D /* RecordingView.swift */,
-				EC93EEC82AE6BEED0080CC9D /* CoachProfile.swift */,
-				EC93EECC2AE6C3C30080CC9D /* PlayersList.swift */,
-				EC4240FE2AF10E5900E3C870 /* CoachAttemptsList.swift */,
-				EC4241002AF110AF00E3C870 /* PlayerView.swift */,
 				EC4241022AF113B900E3C870 /* PlayerEnabledExercises.swift */,
-				EC4241042AF117F300E3C870 /* GroupsList.swift */,
-				EC42410A2AF11A3600E3C870 /* GroupView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -242,6 +248,7 @@
 				EC93EEC42AE6A4940080CC9D /* CoachViewModel.swift */,
 				EC93EECE2AE6D12A0080CC9D /* PlayersViewModel.swift */,
 				EC4241082AF1188800E3C870 /* GroupViewModel.swift */,
+				ECF923332AFA4C47004D45FE /* PlayerCoachRelationshipViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -263,6 +270,53 @@
 				EC729D512AE53CA3009DFC36 /* back_squat.mp4 */,
 			);
 			path = Videos;
+			sourceTree = "<group>";
+		};
+		ECF6D7EA2AF941F50096FCCD /* common */ = {
+			isa = PBXGroup;
+			children = (
+				EC93EEB72AE5C95B0080CC9D /* Signup.swift */,
+				EC34206B2AE33617002E842E /* Login.swift */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		ECF6D7EB2AF941FE0096FCCD /* player */ = {
+			isa = PBXGroup;
+			children = (
+				EC3420642AE323BD002E842E /* PlayerProfile.swift */,
+				EC34205E2AE31BD2002E842E /* ExerciseAttemptsList.swift */,
+			);
+			path = player;
+			sourceTree = "<group>";
+		};
+		ECF6D7EC2AF942050096FCCD /* coach */ = {
+			isa = PBXGroup;
+			children = (
+				EC4240FE2AF10E5900E3C870 /* CoachAttemptsList.swift */,
+				EC4241002AF110AF00E3C870 /* PlayerView.swift */,
+				EC42410A2AF11A3600E3C870 /* GroupView.swift */,
+				EC4241042AF117F300E3C870 /* GroupsList.swift */,
+				EC93EEC82AE6BEED0080CC9D /* CoachProfile.swift */,
+				EC93EECC2AE6C3C30080CC9D /* PlayersList.swift */,
+			);
+			path = coach;
+			sourceTree = "<group>";
+		};
+		ECF923282AF94DF1004D45FE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				ECF923292AF94E07004D45FE /* formatDate.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		ECF9232B2AF959C1004D45FE /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				ECF9232C2AF959F5004D45FE /* dev.xcconfig */,
+			);
+			path = Configs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -400,6 +454,7 @@
 				EC3420612AE32266002E842E /* UserModel.swift in Sources */,
 				EC93EECB2AE6C2E20080CC9D /* PlayerCard.swift in Sources */,
 				EC34205A2AE2F54C002E842E /* ExerciseAttemptViewModel.swift in Sources */,
+				ECF9232A2AF94E07004D45FE /* formatDate.swift in Sources */,
 				EC036D352ADEC76E0048E579 /* ContentView.swift in Sources */,
 				EC93EEBC2AE664170080CC9D /* RecordingView.swift in Sources */,
 				EC34205F2AE31BD2002E842E /* ExerciseAttemptsList.swift in Sources */,
@@ -421,14 +476,17 @@
 				EC3420652AE323BD002E842E /* PlayerProfile.swift in Sources */,
 				EC34206E2AE33BEB002E842E /* SplashHeader.swift in Sources */,
 				EC93EEC92AE6BEED0080CC9D /* CoachProfile.swift in Sources */,
+				ECF923342AFA4C47004D45FE /* PlayerCoachRelationshipViewModel.swift in Sources */,
 				EC92D8AA2AE3F84400E8E5DA /* ExerciseList.swift in Sources */,
 				EC93EEC72AE6BC6A0080CC9D /* ProfileBase.swift in Sources */,
+				ECF923322AFA4BDB004D45FE /* PlayerCoachRelationship.swift in Sources */,
 				EC34206C2AE33617002E842E /* Login.swift in Sources */,
 				EC4241012AF110AF00E3C870 /* PlayerView.swift in Sources */,
 				EC4240FF2AF10E5900E3C870 /* CoachAttemptsList.swift in Sources */,
 				EC92D8A82AE3F65D00E8E5DA /* ExerciseViewModel.swift in Sources */,
 				EC34206A2AE33550002E842E /* AuthManager.swift in Sources */,
 				EC93EECF2AE6D12A0080CC9D /* PlayersViewModel.swift in Sources */,
+				ECF923362AFA629B004D45FE /* Player.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -724,6 +782,139 @@
 			};
 			name = Release;
 		};
+		ECF9232D2AFA488D004D45FE /* Dev */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Dev;
+		};
+		ECF9232E2AFA488D004D45FE /* Dev */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FYP/Preview Content\"";
+				DEVELOPMENT_TEAM = QR9J2FWA6N;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FYP/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "To capture videos";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "To capture videos";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "To capture videos";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jackomeara.FYP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Dev;
+		};
+		ECF9232F2AFA488D004D45FE /* Dev */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QR9J2FWA6N;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jackomeara.FYPTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FYP.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FYP";
+			};
+			name = Dev;
+		};
+		ECF923302AFA488D004D45FE /* Dev */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QR9J2FWA6N;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jackomeara.FYPUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FYP;
+			};
+			name = Dev;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -731,6 +922,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EC036D512ADEC7710048E579 /* Debug */,
+				ECF9232D2AFA488D004D45FE /* Dev */,
 				EC036D522ADEC7710048E579 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -740,6 +932,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EC036D542ADEC7710048E579 /* Debug */,
+				ECF9232E2AFA488D004D45FE /* Dev */,
 				EC036D552ADEC7710048E579 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -749,6 +942,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EC036D572ADEC7710048E579 /* Debug */,
+				ECF9232F2AFA488D004D45FE /* Dev */,
 				EC036D582ADEC7710048E579 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -758,6 +952,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EC036D5A2ADEC7710048E579 /* Debug */,
+				ECF923302AFA488D004D45FE /* Dev */,
 				EC036D5B2ADEC7710048E579 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;

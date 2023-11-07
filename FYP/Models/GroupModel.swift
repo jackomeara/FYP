@@ -7,9 +7,24 @@
 
 import Foundation
 
-struct Group: Identifiable {
+struct Group: Identifiable, Codable {
     let id: UUID
     let name: String
-    let players: [User]
+    let players: [Player]
     let coachID: UUID
+}
+
+struct GroupResponse: Codable, Identifiable {
+    let id: UUID
+    let name: String
+    let coachEmail: String
+    let coachID: String
+    let coachName: String
+    let players: [GroupPlayer]
+}
+
+struct GroupPlayer: Codable {
+    let playerID: String
+    let playerName: String
+    let playerEmail: String
 }

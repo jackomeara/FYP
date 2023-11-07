@@ -1,26 +1,26 @@
 //
-//  ExerciseViewModel.swift
+//  PlayerCoachRelationshipViewModel.swift
 //  FYP
 //
-//  Created by Jack O'Meara on 21/10/2023.
+//  Created by Jack O'Meara on 07/11/2023.
 //
 
 import Foundation
 
-class ExerciseViewModel: ObservableObject {
-    @Published var exercises: [Exercise] = []
+class PlayerCoachRelationshipViewModel: ObservableObject {
+    @Published var relationships: [PlayerCoachRelationship] = []
     @Published var error: Error?
     
-    private struct RequestWrapper: Codable {
-        var data: [ExerciseResponse]
+    struct RequestWrapper: Codable {
+        var data: [PlayerCoachRelationship]
     }
     
     init() {
         processRequestData()
     }
     
-    func fetchData(completion: @escaping (Result<[ExerciseResponse], Error>) -> Void) {
-        URLSession.shared.dataTask(with: URL(string: "http://localhost:8055/items/technique")!) {data, response, error in
+    func fetchData(completion: @escaping (Result<[PlayerCoachRelationship], Error>) -> Void) {
+        URLSession.shared.dataTask(with: URL(string: "http://localhost:8055/items/coachRelationship")!) {data, response, error in
             DispatchQueue.main.async {
                 if let data = data {
                     do {
@@ -43,8 +43,8 @@ class ExerciseViewModel: ObservableObject {
             case .success(let response):
                 do {
                     let reqJSON = try JSONEncoder().encode(response)
-                    let processedArray = try JSONDecoder().decode([Exercise].self, from: reqJSON)
-                    self.exercises = processedArray
+                    let processedArray = try JSONDecoder().decode([PlayerCoachRelationship].self, from: reqJSON)
+                    self.relationships = processedArray
                 } catch {
                     self.error = error
                 }

@@ -1,0 +1,11 @@
+//
+//  dev.xcconfig
+//  FYP
+//
+//  Created by Jack O'Meara on 06/11/2023.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+API_URL=http://localhost:8055

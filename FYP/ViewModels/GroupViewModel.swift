@@ -8,10 +8,57 @@
 import Foundation
 
 class GroupViewModel: ObservableObject {
-    @Published var groups: [Group]
+    @Published var groups: [Group] = []
+    @Published var error: Error?
+    
+    struct RequestWrapper: Codable {
+        var data: [GroupResponse]
+    }
     
     init() {
-        groups = groupData
+        processRequestData()
+    }
+    
+    func fetchData(completion: @escaping (Result<[GroupResponse], Error>) -> Void) {
+        URLSession.shared.dataTask(with: URL(string: "http://localhost:8055/items/group")!) {data, response, error in
+            DispatchQueue.main.async {
+                if let data = data {
+                    do {
+                        let decodedData = try JSONDecoder().decode(RequestWrapper.self, from: data)
+                        let responseData = decodedData.data
+                        completion(.success(responseData))
+                    } catch {
+                        completion(.failure(error))
+                    }
+                } else if let error = error {
+                    completion(.failure(error))
+                }
+            }
+        }.resume()
+    }
+    
+    // process directus request into array of attempt model
+    func processRequestData() {
+        fetchData { result in
+            switch result {
+            case .success(let response):
+                var groupList: [Group] = []
+                for group in response {
+                    var playerList: [Player] = []
+                    for player in group.players {
+                        let playerObj: Player = Player(id: UUID(), name: player.playerName, email: player.playerEmail)
+                        playerList.append(playerObj)
+                    }
+                    let groupObj = Group(id: UUID(), name: group.name, players: playerList, coachID: UUID())
+                    groupList.append(groupObj)
+                    self.groups = groupList
+                }
+                
+            case .failure (let error):
+                self.error = error
+                print(error)
+            }
+        }
     }
 }
 
@@ -19,17 +66,17 @@ let groupData = [
     Group(id: UUID(), 
           name: "Basketball",
           players: [
-            User(id: UUID(), name: "Leandro Barbosa", email: "leandrobarbosa", profilePhoto: "barbosa"),
-            User(id: UUID(), name: "Kobe Bryant", email: "kobebryant", profilePhoto: "kobe"),
-            User(id: UUID(), name: "Jared Dudley", email: "jared_dudley", profilePhoto: "jared_dudley")
+            Player(id: UUID(), name: "Leandro Barbosa", email: "leandrobarbosa", profilePhoto: "barbosa"),
+            Player(id: UUID(), name: "Kobe Bryant", email: "kobebryant", profilePhoto: "kobe"),
+            Player(id: UUID(), name: "Jared Dudley", email: "jared_dudley", profilePhoto: "jared_dudley")
           ],
           coachID: UUID()),
     Group(id: UUID(),
           name: "Golf",
           players: [
-            User(id: UUID(), name: "Tiger Woods", email: "tw", profilePhoto: ""),
-            User(id: UUID(), name: "Ernie Els", email: "ee", profilePhoto: "els"),
-            User(id: UUID(), name: "Rory McIlroy", email: "rm", profilePhoto: "")
+            Player(id: UUID(), name: "Tiger Woods", email: "tw", profilePhoto: ""),
+            Player(id: UUID(), name: "Ernie Els", email: "ee", profilePhoto: "els"),
+            Player(id: UUID(), name: "Rory McIlroy", email: "rm", profilePhoto: "")
           ],
           coachID: UUID())
 ]
