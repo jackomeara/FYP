@@ -9,6 +9,8 @@ import SwiftUI
 
 @main
 struct FYPApp: App {
+    let appSettings = AppSettings()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

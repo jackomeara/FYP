@@ -12,11 +12,11 @@ struct GroupView: View {
     @State var showPlayers: Bool = true
     var body: some View {
         VStack {
-            Button(showPlayers ? "View Attempts" : "View Players") {
-                showPlayers = !showPlayers
-            }
             if(showPlayers) {
                 NavigationStack {
+                    Button(showPlayers ? "View Attempts" : "View Players") {
+                        showPlayers = !showPlayers
+                    }
                     List {
                         ForEach(group.players){ player in
                             NavigationLink(destination: PlayerView(player: player)){
@@ -26,8 +26,19 @@ struct GroupView: View {
                     }
                     .navigationTitle("Players")
                     .listStyle(PlainListStyle())
+                    .toolbar {
+                        Button {
+                            
+                        } label: {
+                            Image(systemName: "trash.fill")
+                                .foregroundStyle(.red)
+                        }
+                    }
                 }
             } else {
+                Button(showPlayers ? "View Attempts" : "View Players") {
+                    showPlayers = !showPlayers
+                }
                     CoachAttemptsList()
                 }
         }

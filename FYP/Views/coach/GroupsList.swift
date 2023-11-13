@@ -28,6 +28,13 @@ struct GroupsList: View {
             }
             .navigationTitle("Groups")
             .listStyle(PlainListStyle())
+            .toolbar {
+                NavigationLink {
+                    CreateGroup()
+                } label: {
+                    Image(systemName: "plus")
+                }
+            }
         }
     }
 }

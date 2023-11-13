@@ -11,13 +11,14 @@ struct PlayerProfile: View {
     @ObservedObject var coachesModel: CoachViewModel = CoachViewModel()
     @ObservedObject var userModel: UserViewModel = UserViewModel()
     @ObservedObject var relationshipModel: PlayerCoachRelationshipViewModel = PlayerCoachRelationshipViewModel()
+    @ObservedObject var exerciseModel: ExerciseViewModel = ExerciseViewModel()
     @ObservedObject var loginManager: LoginManager
     @State private var newCoach: String = ""
     
     var body: some View {
         ScrollView {
             VStack {
-                ProfileBase(user: userModel.user, stat1: "Attempts", value1: 24, stat2: "Exercises", value2: 4)
+                ProfileBase(user: userModel.user, stat1: "Attempts", value1: 24, stat2: "Exercises", value2: exerciseModel.exercises.count)
                 
                 VStack {
                     Text("Coach List")

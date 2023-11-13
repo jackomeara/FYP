@@ -14,6 +14,8 @@
 		EC036D442ADEC7710048E579 /* FYPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC036D432ADEC7710048E579 /* FYPTests.swift */; };
 		EC036D4E2ADEC7710048E579 /* FYPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC036D4D2ADEC7710048E579 /* FYPUITests.swift */; };
 		EC036D502ADEC7710048E579 /* FYPUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC036D4F2ADEC7710048E579 /* FYPUITestsLaunchTests.swift */; };
+		EC118B6B2B02679400AEAD2A /* GroupRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC118B6A2B02679400AEAD2A /* GroupRequests.swift */; };
+		EC118B6D2B02699F00AEAD2A /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC118B6C2B02699F00AEAD2A /* AppSettings.swift */; };
 		EC3420562AE2F2F2002E842E /* ExerciseAttemptModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3420552AE2F2F2002E842E /* ExerciseAttemptModel.swift */; };
 		EC34205A2AE2F54C002E842E /* ExerciseAttemptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3420592AE2F54C002E842E /* ExerciseAttemptViewModel.swift */; };
 		EC34205F2AE31BD2002E842E /* ExerciseAttemptsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC34205E2AE31BD2002E842E /* ExerciseAttemptsList.swift */; };
@@ -50,6 +52,7 @@
 		ECF923322AFA4BDB004D45FE /* PlayerCoachRelationship.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF923312AFA4BDB004D45FE /* PlayerCoachRelationship.swift */; };
 		ECF923342AFA4C47004D45FE /* PlayerCoachRelationshipViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF923332AFA4C47004D45FE /* PlayerCoachRelationshipViewModel.swift */; };
 		ECF923362AFA629B004D45FE /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF923352AFA629B004D45FE /* Player.swift */; };
+		ECF923382AFACC03004D45FE /* CreateGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF923372AFACC03004D45FE /* CreateGroup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +83,8 @@
 		EC036D492ADEC7710048E579 /* FYPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FYPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC036D4D2ADEC7710048E579 /* FYPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FYPUITests.swift; sourceTree = "<group>"; };
 		EC036D4F2ADEC7710048E579 /* FYPUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FYPUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EC118B6A2B02679400AEAD2A /* GroupRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupRequests.swift; sourceTree = "<group>"; };
+		EC118B6C2B02699F00AEAD2A /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		EC3420552AE2F2F2002E842E /* ExerciseAttemptModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseAttemptModel.swift; sourceTree = "<group>"; };
 		EC3420592AE2F54C002E842E /* ExerciseAttemptViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseAttemptViewModel.swift; sourceTree = "<group>"; };
 		EC34205E2AE31BD2002E842E /* ExerciseAttemptsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseAttemptsList.swift; sourceTree = "<group>"; };
@@ -118,6 +123,7 @@
 		ECF923312AFA4BDB004D45FE /* PlayerCoachRelationship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCoachRelationship.swift; sourceTree = "<group>"; };
 		ECF923332AFA4C47004D45FE /* PlayerCoachRelationshipViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCoachRelationshipViewModel.swift; sourceTree = "<group>"; };
 		ECF923352AFA629B004D45FE /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		ECF923372AFACC03004D45FE /* CreateGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,7 +155,6 @@
 			isa = PBXGroup;
 			children = (
 				EC036D312ADEC76E0048E579 /* FYP */,
-				EC036D422ADEC7710048E579 /* FYPTests */,
 				EC036D4C2ADEC7710048E579 /* FYPUITests */,
 				EC036D302ADEC76E0048E579 /* Products */,
 			);
@@ -168,6 +173,7 @@
 		EC036D312ADEC76E0048E579 /* FYP */ = {
 			isa = PBXGroup;
 			children = (
+				EC118B692B02435F00AEAD2A /* Network */,
 				ECF9232B2AF959C1004D45FE /* Configs */,
 				ECF923282AF94DF1004D45FE /* Helpers */,
 				EC93EEBD2AE66CCB0080CC9D /* Info.plist */,
@@ -181,6 +187,7 @@
 				EC036D362ADEC7700048E579 /* Assets.xcassets */,
 				EC036D382ADEC7700048E579 /* Preview Content */,
 				EC3420692AE33550002E842E /* AuthManager.swift */,
+				EC036D422ADEC7710048E579 /* FYPTests */,
 			);
 			path = FYP;
 			sourceTree = "<group>";
@@ -208,6 +215,14 @@
 				EC036D4F2ADEC7710048E579 /* FYPUITestsLaunchTests.swift */,
 			);
 			path = FYPUITests;
+			sourceTree = "<group>";
+		};
+		EC118B692B02435F00AEAD2A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				EC118B6A2B02679400AEAD2A /* GroupRequests.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		EC3420542AE2F1F6002E842E /* Models */ = {
@@ -299,6 +314,7 @@
 				EC4241042AF117F300E3C870 /* GroupsList.swift */,
 				EC93EEC82AE6BEED0080CC9D /* CoachProfile.swift */,
 				EC93EECC2AE6C3C30080CC9D /* PlayersList.swift */,
+				ECF923372AFACC03004D45FE /* CreateGroup.swift */,
 			);
 			path = coach;
 			sourceTree = "<group>";
@@ -307,6 +323,7 @@
 			isa = PBXGroup;
 			children = (
 				ECF923292AF94E07004D45FE /* formatDate.swift */,
+				EC118B6C2B02699F00AEAD2A /* AppSettings.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -461,6 +478,7 @@
 				EC4241052AF117F300E3C870 /* GroupsList.swift in Sources */,
 				EC4241092AF1188800E3C870 /* GroupViewModel.swift in Sources */,
 				EC4241072AF1181A00E3C870 /* GroupModel.swift in Sources */,
+				ECF923382AFACC03004D45FE /* CreateGroup.swift in Sources */,
 				EC93EEB82AE5C95B0080CC9D /* Signup.swift in Sources */,
 				EC3420562AE2F2F2002E842E /* ExerciseAttemptModel.swift in Sources */,
 				EC92D8A62AE3F5A300E8E5DA /* ExerciseModel.swift in Sources */,
@@ -470,6 +488,7 @@
 				EC93EEC32AE6A3980080CC9D /* CoachModel.swift in Sources */,
 				EC93EEC52AE6A4940080CC9D /* CoachViewModel.swift in Sources */,
 				EC3420682AE32F3B002E842E /* AttemptCard.swift in Sources */,
+				EC118B6B2B02679400AEAD2A /* GroupRequests.swift in Sources */,
 				EC93EECD2AE6C3C30080CC9D /* PlayersList.swift in Sources */,
 				EC42410B2AF11A3600E3C870 /* GroupView.swift in Sources */,
 				EC4241032AF113B900E3C870 /* PlayerEnabledExercises.swift in Sources */,
@@ -486,6 +505,7 @@
 				EC92D8A82AE3F65D00E8E5DA /* ExerciseViewModel.swift in Sources */,
 				EC34206A2AE33550002E842E /* AuthManager.swift in Sources */,
 				EC93EECF2AE6D12A0080CC9D /* PlayersViewModel.swift in Sources */,
+				EC118B6D2B02699F00AEAD2A /* AppSettings.swift in Sources */,
 				ECF923362AFA629B004D45FE /* Player.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

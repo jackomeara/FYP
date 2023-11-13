@@ -20,7 +20,7 @@ class PlayerCoachRelationshipViewModel: ObservableObject {
     }
     
     func fetchData(completion: @escaping (Result<[PlayerCoachRelationship], Error>) -> Void) {
-        URLSession.shared.dataTask(with: URL(string: "http://localhost:8055/items/coachRelationship")!) {data, response, error in
+        URLSession.shared.dataTask(with: URL(string: "http://192.168.1.30:8055/items/coachRelationship")!) {data, response, error in
             DispatchQueue.main.async {
                 if let data = data {
                     do {

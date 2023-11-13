@@ -128,6 +128,8 @@ class Recorder: NSObject, AVCaptureFileOutputRecordingDelegate, ObservableObject
       print("Error recording: \(error.localizedDescription)")
       return
     }
+    // Upload to directus
+    
 
     // Save video to Photos
     PHPhotoLibrary.shared().performChanges({

@@ -20,7 +20,7 @@ class GroupViewModel: ObservableObject {
     }
     
     func fetchData(completion: @escaping (Result<[GroupResponse], Error>) -> Void) {
-        URLSession.shared.dataTask(with: URL(string: "http://localhost:8055/items/group")!) {data, response, error in
+        URLSession.shared.dataTask(with: URL(string: "http://192.168.1.30:8055/items/group")!) {data, response, error in
             DispatchQueue.main.async {
                 if let data = data {
                     do {
@@ -58,6 +58,36 @@ class GroupViewModel: ObservableObject {
                 self.error = error
                 print(error)
             }
+        }
+    }
+    
+    private func createNewGroupRequest(groupJSON: Data, completion: @escaping (Result<Bool, Error>) -> Void) {
+        var request = URLRequest(url: URL(string:"http://192.168.1.30:8055/items/group")!)
+        request.httpMethod = "POST"
+        request.setValue(
+            "application/json",
+            forHTTPHeaderField: "Content-Type"
+        )
+        request.httpBody = groupJSON
+        URLSession.shared.dataTask(with: request) {data, response, error in
+            DispatchQueue.main.async {
+                if let data = data {
+                    do {
+                        print(data)
+                        completion(.success(true))
+                    } catch {
+                        completion(.failure(error))
+                    }
+                } else if let error = error {
+                    completion(.failure(error))
+                }
+            }
+        }.resume()
+    }
+    
+    func createNewGroup(group: Data) {
+        createNewGroupRequest(groupJSON: group) { status in
+            print("creating group request")
         }
     }
 }

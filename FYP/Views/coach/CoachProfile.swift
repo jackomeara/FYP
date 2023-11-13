@@ -14,7 +14,7 @@ struct CoachProfile: View {
     var body: some View {
         ScrollView {
             VStack {
-                ProfileBase(user: userModel.user, stat1: "Players", value1: 31, stat2: "To Review", value2: 2)
+                ProfileBase(user: userModel.user, stat1: "Players", value1: 3, stat2: "To Review", value2: 1)
             }
             
             Button("Log Out") {

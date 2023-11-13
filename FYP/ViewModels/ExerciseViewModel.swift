@@ -20,7 +20,7 @@ class ExerciseViewModel: ObservableObject {
     }
     
     func fetchData(completion: @escaping (Result<[ExerciseResponse], Error>) -> Void) {
-        URLSession.shared.dataTask(with: URL(string: "http://localhost:8055/items/technique")!) {data, response, error in
+        URLSession.shared.dataTask(with: URL(string: "http://192.168.1.30:8055/items/technique")!) {data, response, error in
             DispatchQueue.main.async {
                 if let data = data {
                     do {

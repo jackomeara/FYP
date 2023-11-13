@@ -23,7 +23,7 @@ class ExerciseAttemptViewModel: ObservableObject {
     // get all attempts from directus and save as array of attempt response model
     func fetchData(completion: @escaping (Result<[ExerciseAttemptResponse], Error>) -> Void) {
         
-        URLSession.shared.dataTask(with: URL(string: "http://localhost:8055/items/attempt")!) { data, response, error in
+        URLSession.shared.dataTask(with: URL(string: "http://192.168.1.30:8055/items/attempt")!) { data, response, error in
             DispatchQueue.main.async {
                 if let data = data {
                     do {

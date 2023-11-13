@@ -21,7 +21,7 @@ class CoachViewModel: ObservableObject {
     }
     
     func fetchData(completion: @escaping (Result<[UserResponse], Error>) -> Void) {
-        URLSession.shared.dataTask(with: URL(string: "http://localhost:8055/users?filter[role][_eq]=b4d51e8a-cb89-4363-9d36-6dc37b2bf2da")!) {data, response, error in
+        URLSession.shared.dataTask(with: URL(string: "http://192.168.1.30:8055/users?filter[role][_eq]=b4d51e8a-cb89-4363-9d36-6dc37b2bf2da")!) {data, response, error in
             DispatchQueue.main.async {
                 if let data = data {
                     do {

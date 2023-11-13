@@ -20,10 +20,11 @@ class PlayersViewModel: ObservableObject {
     
     init() {
         processRequestData()
+        self.requestedPlayers = requestedPlayersData
     }
     
     func fetchData(completion: @escaping (Result<[UserResponse], Error>) -> Void) {
-        URLSession.shared.dataTask(with: URL(string: "http://localhost:8055/users?filter[role][_eq]=8afd8746-1d8d-4eee-96dc-ecd5840f6df5")!) {data, response, error in
+        URLSession.shared.dataTask(with: URL(string: "http://192.168.1.30:8055/users?filter[role][_eq]=8afd8746-1d8d-4eee-96dc-ecd5840f6df5")!) {data, response, error in
             DispatchQueue.main.async {
                 if let data = data {
                     do {
@@ -80,7 +81,7 @@ let playersData = [
 ]
 
 let requestedPlayersData = [
-    User(id: UUID(), name: "Tiger Woods", email: "tigerwoods@gmail.com", profilePhoto: "none"),
-    User(id: UUID(), name: "Jared Dudley", email: "jareddudley@gmail.com", profilePhoto: "jared_dudley"),
-    User(id: UUID(), name: "Leandro Barbosa", email: "leandrobarbosa@gmail.com", profilePhoto: "barbosa"),
+    Player(id: UUID(), name: "Tiger Woods", email: "tigerwoods@gmail.com", profilePhoto: "none"),
+    Player(id: UUID(), name: "Jared Dudley", email: "jareddudley@gmail.com", profilePhoto: "jared_dudley"),
+    Player(id: UUID(), name: "Leandro Barbosa", email: "leandrobarbosa@gmail.com", profilePhoto: "barbosa"),
 ]
